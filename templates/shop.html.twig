@@ -1,0 +1,105 @@
+{% extends "base.html.twig" %}
+
+{% block carousell %}
+    <header>
+        <title>Blanco banco Page Photographie</title>
+        <!-- carouselle principal-->
+        <div id="boite-carouselle-menu" class="container-fluid">
+            <div
+                    id="Carouselle-Menu"
+                    class="carousel slide row"
+                    data-ride="carousel">
+                <div>
+                    <!-- action du carouselle -->
+                    <ol class="carousel-indicators">
+                        <li
+                                data-target="#Carouselle-Menu"
+                                data-slide-to="0"
+                                class="active">
+                        </li>
+                        <li data-target="#Carouselle-Menu" data-slide-to="1"></li>
+                        <li data-target="#Carouselle-Menu" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Main carouselle -->
+                    <div class="carousel-inner ">
+                        <div class="carousel-item main-carousel active ">
+                            <img src="img/3000x3000/hh.png" class="d-block w-100 img-fluid img-responsive" id="photos" alt="sur se site vous pourez trouvez les derniers photos de blanco"/>
+                            <div class="carousel-caption  d-md-block"></div>
+                        </div>
+                        <div class="carousel-item main-carousel">
+                            <img src="img/photo/LG PHOTO/photo_8_lg.JPG"class="d-block w-100 img-fluid img-responsive" alt="vous pourez commander une cover d'album ou un clip street sur se site web"/>
+                        </div>
+                        <div class="carousel-item main-carousel">
+                            <img
+                                    src="IMG/photo/LG PHOTO/photo-10-lg.JPG"
+                                    class="d-block w-100 img-fluid"
+                                    alt="vous pourez trouvez les derniers Vétemens de la marque ELC sur se site web"/>
+                        </div>
+                    </div>
+                    <!-- icon et action de slide carouselle -->
+                    <a class="carousel-control-prev" href="#Carouselle-Menu" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next m-0" href="#Carouselle-Menu" role="button"data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a >
+                </div>
+            </div>
+        </div>
+        <!-- navbar MENU -->
+        <nav class="contenaire-fluid navbar">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-sm-3 col-lg-3">
+                    <img src="img/blanco.png" alt="" class="container-fluid " />
+                </div>
+                <div class="col-lg-6 text-light text-center font-weight-bold">
+                    <ul class="row">
+                        <li class="sm-col-4 col-lg-4"><a href="cover.html.twig">COVER</a></li>
+                        <li class="sm-col-4 col-lg-4"><a href="photo.html.twig">PHOTOS</a></li>
+                        <li class="sm-col-4 col-lg-4"><a href="shop.html.twig">SHOP</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+{% endblock carousell %}
+
+
+{% block content %}
+
+
+    <main id="cover-main-article">
+        <article id="article-cover" class="container-fluid">
+            <div class="row justify-content-center col-sm-12 col-lg-12 py-lg-4">
+                <h4>Le shop</h4>
+            </div>
+            <div><img src="img/" alt=""></div>
+            <div class="barre-jaune"></div>
+            <div class="container justify-content-center px-5">
+                <p>
+                    Blanco Banco production est un service mis en place pour les jeunes
+                    créateurs musicales,cette plateformes leur permet de mettre en avant
+                    leur créations avec des visuelles et des teasers original pour leurs
+                    permettre de ce mettre en valeur sur les plateformes et résaux
+                    sociaux
+                </p>
+            </div>
+            <!-- envoyer sa sur php storm pour boucler avec les infos de la bdd -->
+            <div class="container">
+                <div class="row col-sm-12 col-lg-12 justify-content-around my-4">
+                    <button>Ecriture lointaine crew </button>
+                </div>
+            </div>
+{#            <article class="text-center">#}
+{#                {% for product in product %}#}
+{#                <p>Capsule N°1 Élément </p>#}
+{#                <div>#}
+{#                    <div>#}
+{#                        <img src="" alt="">#}
+{#                    </div>#}
+{#                    <div>STORM</div>#}
+{#                    <div>29,90e</div>#}
+{#                </div>#}
+{#                {% endfor %}#}
+{#            </article>#}
+{% endblock content %}

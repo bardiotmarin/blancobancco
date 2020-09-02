@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+    {% block carousell %}
+    {% endblock carousell%}
+
+
+    {% block content %}
+ {{ form_start(registrationForm) }}
+
+    {{ form_widget(registrationForm.email, {'attr': {'class': ''}}) }}
+    {{ form_label(registrationForm.email) }}
+    {{ form_errors(registrationForm.email)}}
+
+
+    {{ form_widget(registrationForm.pseudo) }}
+    {{ form_label(registrationForm.pseudo) }}
+    {{ form_errors(registrationForm.pseudo)}}
+
+    {{ form_widget(registrationForm.submit) }}
+
+
+    {{ form_end(registrationForm) }}
+    {% endblock content %}

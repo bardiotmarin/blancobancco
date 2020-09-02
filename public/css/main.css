@@ -1,0 +1,576 @@
+* {
+  box-sizing: border-box;
+}
+
+.button-intro {
+  width: 100%;
+  height: auto;
+  color: #C82829;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.carousel-item active, .carousel-item {
+  width: 100%;
+  height: 80vh;
+}
+
+ul li {
+  list-style: none;
+  border: solid 1px white;
+}
+
+.logo-blanco {
+  width: 100px;
+  height: auto;
+  border: solid 1px violet;
+}
+
+#article-cover {
+  background-color: #EFEFEF;
+}
+
+.btn-portfolio {
+  background-color: #0BE09E;
+  height: 60px;
+  width: 330px;
+  border-radius: 44%;
+  color: whitesmoke;
+  text-align: center;
+}
+
+/* <navbar> */
+/* section text , boite general , et boite colorer en dur*/
+.cardPolaroide1 {
+  background-color: var(--background);
+  border: 3px solid var(--primary);
+  display: block;
+  width: 500px;
+  height: 6vh;
+  cursor: pointer;
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 90px;
+  /* box en dur couleur / principe de la variable :root*/
+  box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green), 20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 30px -30px 0 -3px var(--background), 30px -30px var(--orange), 40px -40px 0 -3px var(--background), 40px -40px var(--red);
+}
+
+/* section hover et animation boite  */
+.cardPolaroide1:hover {
+  animation: shadow-wave 1s ease infinite;
+}
+
+@keyframes shadow-wave {
+  0% {
+    border: 3px solid var(--primary);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green), 20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 30px -30px 0 -3px var(--background), 30px -30px var(--orange), 40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  }
+  20% {
+    border: 3px solid var(--red);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--primary), 20px -20px 0 -3px var(--background), 20px -20px var(--green), 30px -30px 0 -3px var(--background), 30px -30px var(--yellow), 40px -40px 0 -3px var(--background), 40px -40px var(--orange);
+  }
+  40% {
+    border: 3px solid var(--orange);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--red), 20px -20px 0 -3px var(--background), 20px -20px var(--primary), 30px -30px 0 -3px var(--background), 30px -30px var(--green), 40px -40px 0 -3px var(--background), 40px -40px var(--yellow);
+  }
+  60% {
+    border: 3px solid var(--yellow);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--orange), 20px -20px 0 -3px var(--background), 20px -20px var(--red), 30px -30px 0 -3px var(--background), 30px -30px var(--primary), 40px -40px 0 -3px var(--background), 40px -40px var(--green);
+  }
+  80% {
+    border: 3px solid var(--green);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--yellow), 20px -20px 0 -3px var(--background), 20px -20px var(--orange), 30px -30px 0 -3px var(--background), 30px -30px var(--red), 40px -40px 0 -3px var(--background), 40px -40px var(--primary);
+  }
+  100% {
+    border: 3px solid var(--primary);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green), 20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 30px -30px 0 -3px var(--background), 30px -30px var(--orange), 40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  }
+}
+:root {
+  --primary: #22D2A0;
+  --secondary: #192824;
+  --background: white;
+  --green: #1FC11B;
+  --yellow: #FFD913;
+  --orange: #FF9C55;
+  --red: #FF5555;
+}
+
+.cardPolaroide1 li {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.cardPolaroide1 h2 {
+  font-size: 14px;
+  font-family: "Archivo Black", "Archivo", sans-serif;
+  font-weight: normal;
+}
+
+/* /navbar */
+/* font */
+@font-face {
+  font-family: "vogue";
+  src: url(../Fontzer/Vogue.ttf);
+}
+@font-face {
+  font-family: "lemon";
+  src: url(../Fontzer/LEMONMILK-Light.otf);
+}
+/* customs */
+.barre {
+  width: 150px;
+  height: 2px;
+  background-color: teal;
+}
+
+/* carousel */
+.carousel-inner-cover {
+  height: 490px;
+}
+
+.tareuss {
+  border-color: tomato 1px;
+}
+
+* {
+  margin: 0;
+}
+
+.main-carousel {
+  width: 100%;
+  height: 80vh;
+}
+
+.carousel-item {
+  height: 80h;
+}
+
+ul li {
+  list-style: none;
+}
+
+nav nav {
+  border: solid 1px violet;
+  height: 10vh;
+}
+
+.logo-blanco {
+  width: 100px;
+  height: auto;
+  border: solid 1px violet;
+}
+
+#article-cover {
+  background-color: #EFEFEF;
+}
+
+.btn-portfolio {
+  background-color: #0BE09E;
+  height: 60px;
+  width: 330px;
+  border-radius: 44%;
+  color: whitesmoke;
+  text-align: center;
+}
+
+/* font */
+@font-face {
+  font-family: "vogue";
+  src: url(../Fontzer/Vogue.ttf);
+}
+@font-face {
+  font-family: "lemon";
+  src: url(../Fontzer/LEMONMILK-Light.otf);
+}
+/* customs */
+.barre {
+  width: 150px;
+  height: 2px;
+  background-color: teal;
+}
+
+/* carousel */
+.carousel-inner-cover {
+  height: 490px;
+}
+
+.tareuss {
+  border-color: tomato 1px;
+}
+
+/* magique card menu */
+.cardd-zoom {
+  background-color: var(--background);
+  border: 3px solid var(--primary);
+  display: block;
+  width: 500px;
+  height: 7vh;
+  cursor: pointer;
+  padding: 15px;
+  margin-top: 30px;
+  margin-right: 90px;
+  box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green), 20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 30px -30px 0 -3px var(--background), 30px -30px var(--orange), 40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  transition: box-shadow 1s, top 1s, left 1s;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.cardd-zoom:hover {
+  top: -40px;
+  left: 40px;
+  box-shadow: 0 0 0 -3px var(--background), 0 0 0 0 var(--green), 0 0 0 -3px var(--background), 0 0 0 0 var(--yellow), 0 0 0 -3px var(--background), 0 0 0 0 var(--orange), 0 0 0 -3px var(--background), 0 0 0 0 var(--red);
+}
+
+:root {
+  --primary: #555BFF;
+  --secondary: #22D2A0;
+  --background: white;
+  --green: #1FC11B;
+  --yellow: #FFD913;
+  --orange: #FF9C55;
+  --red: #FF5555;
+}
+
+body {
+  background-size: 2px 3px;
+  background-color: #222222;
+  font-family: "Archivo", sans-serif;
+  color: var(--primary);
+}
+
+.cardd-zoom p {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.cardd-zoom h2 {
+  font-size: 14px;
+  font-family: "Archivo Black", "Archivo", sans-serif;
+  font-weight: normal;
+}
+
+/* carte produits */
+.u-center-text {
+  text-align: center;
+}
+
+.heading-primary {
+  color: black;
+  text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  -webkit-animation-name: moveInLeft;
+  animation-name: moveInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  animation-delay: 3s;
+  animation-iteration-count: 3;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  -webkit-animation: moveInRight 1s ease-out;
+  animation: moveInRight 1s ease-out;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  line-height: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #eee;
+}
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(120, 40, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover::after {
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn:active, .btn:focus {
+  outline: none;
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn--white::after {
+  background-color: #fff;
+}
+
+.btn--green {
+  background: -webkit-gradient(linear, left top, right top, from(#fc466b), to(#3f5efb));
+  background: linear-gradient(to right, #fc466b, #3f5efb);
+  color: #fff;
+}
+
+.btn--green::after {
+  background-color: #55c57a;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.section-plans {
+  padding: 4rem 0 4rem 0;
+}
+
+.card-buy-cover {
+  -webkit-perspective: 150rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem;
+}
+
+.card__side {
+  height: 52rem;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.card__side--front {
+  background-color: #fff;
+}
+
+.card__side--front-1 {
+  background: linear-gradient(-45deg, #f403d1, #64b5f6);
+}
+
+.card__side--front-2 {
+  background: linear-gradient(-45deg, #f321d7, #ffec61);
+}
+
+.card__side--front-3 {
+  background: linear-gradient(-45deg, #24ff72, #9a4eff);
+}
+
+.card__side--back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.card__side--back-1 {
+  background: linear-gradient(-45deg, #64b5f6, #f403d1);
+}
+
+.card__side--back-2 {
+  background: linear-gradient(-45deg, #ffec61, #f321d7);
+}
+
+.card__side--back-3 {
+  background: linear-gradient(-45deg, #9a4eff, #24ff72);
+}
+
+.card-buy-cover:hover .card__side--front-1,
+.card-buy-cover:hover .card__side--front-2,
+.card-buy-cover:hover .card__side--front-3 {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.card-buy-cover:hover .card__side--back {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+
+.card__title {
+  height: 20rem;
+  padding: 4rem 2rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.card__title--1 .fas {
+  font-size: 5rem;
+}
+
+.card__title--2 .fas {
+  font-size: 5rem;
+}
+
+.card__title--3 .fas {
+  font-size: 5rem;
+}
+
+.card__heading {
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  width: 75%;
+}
+
+.card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.card__details {
+  padding: 0 2rem 2rem;
+}
+
+.card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card__details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+
+.card__price-box {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 8rem;
+}
+
+.card__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.card__price-value {
+  font-size: 6rem;
+  font-weight: 100;
+}
+
+.ligne {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.ligne:not(:last-child) {
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+.ligne::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ligne [class^=col-] {
+  float: left;
+}
+
+.ligne [class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.ligne .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+
+/*# sourceMappingURL=main.css.map */
