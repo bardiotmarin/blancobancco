@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ProductRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
@@ -19,23 +20,42 @@ class Product
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message = "Ce champ ne peut pas etre vide")
      */
     private $price;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=False)
+     * @Assert\NotBlank(message = "Ce champ ne peut pas etre vide")
      */
     private $name;
 
+
+
+    /**
+     * @return mixed
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getPrice(): ?int
     {
         return $this->price;
     }
+
 
     public function setPrice(int $price): self
     {
@@ -44,10 +64,14 @@ class Product
         return $this;
     }
 
+    /**
+     * @return mixed
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
+
 
     public function setName(string $name): self
     {
@@ -55,4 +79,6 @@ class Product
 
         return $this;
     }
+
+
 }

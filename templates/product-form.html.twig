@@ -1,6 +1,12 @@
 {% extends "base.html.twig" %}
 
 {% block content %}
-    <h1>{{ form_title }}</h1>
+
     {{ form(form_product) }}
+
+
+
+
+    {{ form_end(form_product) }}
+
 {% endblock content %}
