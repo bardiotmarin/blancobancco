@@ -93,7 +93,7 @@
                         {% for product in products %}
                             <div class="product">
                                 <p>{{ product.name }}</p>
-                                <p>{{ product.price }} pages</p>
+                                <p>{{ product.price }} Euros</p>
                                 <a href="{{ path("shop_show", {"id":product.id}) }}">Voir le livre </a>
                             </div>
                         {% endfor %}

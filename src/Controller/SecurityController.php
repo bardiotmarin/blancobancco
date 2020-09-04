@@ -20,7 +20,7 @@ class SecurityController extends AbstractController
     public function login(AuthorizationCheckerInterface $authorizationChecker ,AuthenticationUtils $authenticationUtils): Response
     {
         if ($authorizationChecker->isGranted('ROLE_ADMIN')) {
-            return $this->redirectToRoute("shop");
+            return $this->redirectToRoute("cover_list");
         } else if ($authorizationChecker->isGranted('ROLE_USER')) {
             return $this->redirectToRoute("shop");
         }
