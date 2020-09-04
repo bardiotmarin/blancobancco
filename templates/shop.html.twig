@@ -1,5 +1,6 @@
 {% extends "base.html.twig" %}
 
+
 {% block carousell %}
     <header>
         <title>Blanco banco Page Photographie</title>
@@ -56,7 +57,7 @@
                     <ul class="row">
                         <li class="sm-col-4 col-lg-4"><a href={{ path("cover_list") }}>COVER</a></li>
                         <li class="sm-col-4 col-lg-4"><a href={{ path("photos_list") }}>PHOTOS</a></li>
-                        <li class="sm-col-4 col-lg-4"><a href={{ path("shop") }}>SHOP</a></li>
+                        <li class="sm-col-4 col-lg-4"><a href={{ path("product_index") }}>SHOP</a></li>
                     </ul>
                 </div>
             </div>
@@ -88,18 +89,18 @@
             <div class="container">
                 <div class="row col-sm-12 col-lg-12 justify-content-around my-4">
                     <button>Ecriture lointaine crew </button>
+                    <div class="block">
+                        {% for product in products %}
+                            <div class="product">
+                                <p>{{ product.name }}</p>
+                                <p>{{ product.price }} pages</p>
+                                <a href="{{ path("shop_show", {"id":product.id}) }}">Voir le livre </a>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
-{#            <article class="text-center">#}
-{#                {% for product in product %}#}
-{#                <p>Capsule N°1 Élément </p>#}
-{#                <div>#}
-{#                    <div>#}
-{#                        <img src="" alt="">#}
-{#                    </div>#}
-{#                    <div>STORM</div>#}
-{#                    <div>29,90e</div>#}
-{#                </div>#}
-{#                {% endfor %}#}
-{#            </article>#}
+{% block body %}
+
+{% endblock body %}
 {% endblock content %}

@@ -4,25 +4,37 @@ namespace App\Controller;
 
 use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ShopController extends AbstractController
 {
 
     /**
-     * @Route("/shop",name="shop")
+     * @Route("/shop", name="product_index")
      */
-    Public function Shop(ProductRepository $productRepository)
-
+    public function index(ProductRepository $productRepository): Response
     {
-//        $product = $productsRepository->findBy(
-//            ['produitsTypes' => 'capsule-1-TeeShirt']);
-     return $this ->render("shop.html.twig",[
-//         "product"=> $product
-     ]);
-
+        return $this->render('shop.html.twig', [
+            'products' => $productRepository->findAll(),
+        ]);
 
     }
+
+    /**
+     * @Route ("/shop/{id}", name="shop_show")
+     */
+    public function BookShow (ProductRepository $productRepository, $id){
+
+        $product= $productRepository->find($id);
+
+        return $this -> render ("product/index.html.twig",[
+
+            "products"=> $product
+        ]);
+    }
+
+
 
 
 }

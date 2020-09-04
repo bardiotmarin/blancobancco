@@ -10,7 +10,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-
+/**
+ * @Route("/product")
+ */
 class ProductController extends AbstractController
 {
     /**
@@ -47,7 +49,7 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("admin/{id}", name="product_show", methods={"GET"})
+     * @Route("/{id}", name="product_show", methods={"GET"})
      */
     public function show(Product $product): Response
     {
