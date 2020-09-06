@@ -57,7 +57,7 @@
                     <ul class="row">
                         <li class="sm-col-4 col-lg-4"><a href={{ path("cover_list") }}>COVER</a></li>
                         <li class="sm-col-4 col-lg-4"><a href={{ path("photos_list") }}>PHOTOS</a></li>
-                        <li class="sm-col-4 col-lg-4"><a href={{ path("product_index") }}>SHOP</a></li>
+                        <li class="sm-col-4 col-lg-4"><a href={{ path("product_shop") }}>SHOP</a></li>
                     </ul>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                             <div class="product">
                                 <p>{{ product.name }}</p>
                                 <p>{{ product.price }} Euros</p>
-                                <a href="{{ path("shop_show", {"id":product.id}) }}">Voir le livre </a>
+                                <a href="{{ path("shop_show", {"id":product.id}) }}">Acheter le teeshirt </a>
                             </div>
                         {% endfor %}
                     </div>
