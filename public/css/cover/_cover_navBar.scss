@@ -18,10 +18,11 @@
   30px -30px 0 -3px var(--background), 30px -30px var(--orange),
   40px -40px 0 -3px var(--background), 40px -40px var(--red);
 }
-/* section hover et animation boite  */
-.cardPolaroide1:hover {
+
+  /* section hover et animation boite  */
+  .cardPolaroide1:hover {
   animation: shadow-wave 1s ease infinite;
-}
+  }
 
 
 @keyframes shadow-wave {

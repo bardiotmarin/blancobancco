@@ -5,8 +5,10 @@
 
 .active,.carousel-item {
   width: 100%;
+  height: 82vh;
 
 }
+
 ul li {
   list-style: none;
   border: solid 1px white;
@@ -16,7 +18,7 @@ ul li {
 .logo-blanco{
   width: 100px;
   height: auto;
-  border: solid 1px violet;
+
 }
 
 #article-cover{
@@ -134,14 +136,9 @@ ul li {
 /* font */
 
 
-@font-face{
-  font-family: 'vogue';
-  src: url(../Fontzer/Vogue.ttf);
-}
-@font-face{
-  font-family: 'lemon';
-  src: url(../Fontzer/LEMONMILK-Light.otf);
-}
+
+
+
 
 /* customs */
 
@@ -160,3 +157,4 @@ ul li {
   border-color: tomato 1px;
 }
 
+//texte //

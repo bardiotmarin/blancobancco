@@ -17,14 +17,11 @@ class ProductFormType extends AbstractType
             ->add('price')
             ->add('name')
 
-
     // je créé l'input File, avec en option "mapped => false" pour
     // que symfony n'enregistre pas automatiquement la valeur du champs
     // (comme il le fait sur les autres champs)
     // quand le formulaire est envoyé
-    ->add('bookCover', FileType::class, [
-    'mapped' => false
-    ])
+
 
     // je rajoute manuellement un input submit
     ->add('submit', SubmitType::class);

@@ -21,9 +21,9 @@
   box-sizing: border-box;
 }
 
-.carousel-item active, .carousel-item {
+.active, .carousel-item {
   width: 100%;
-  height: 83vh;
+  height: 82vh;
 }
 
 ul li {
@@ -34,7 +34,6 @@ ul li {
 .logo-blanco {
   width: 100px;
   height: auto;
-  border: solid 1px violet;
 }
 
 #article-cover {
@@ -123,14 +122,6 @@ ul li {
 
 /* /navbar */
 /* font */
-@font-face {
-  font-family: "vogue";
-  src: url(../Fontzer/Vogue.ttf);
-}
-@font-face {
-  font-family: "lemon";
-  src: url(../Fontzer/LEMONMILK-Light.otf);
-}
 /* customs */
 .barre {
   width: 150px;
@@ -157,7 +148,11 @@ ul li {
 
 nav nav {
   border: solid 1px violet;
-  height: 10vh;
+  height: 8vh;
+}
+
+.main-photos {
+  height: 50vh;
 }
 
 .logo-blanco {
@@ -644,5 +639,22 @@ body {
 }
 
 /* /navbar */
+@font-face {
+  font-family: "Garden";
+  src: url("../css/font/SummerGarden.ttf");
+}
+@font-face {
+  font-family: "vogue";
+  src: url(../Fontzer/Vogue.ttf);
+}
+@font-face {
+  font-family: "lemon";
+  src: url(../Fontzer/LEMONMILK-Light.otf);
+}
+.speach-cover {
+  font-family: Garden;
+  text-align: center;
+  font-size: 25px;
+}
 
 /*# sourceMappingURL=main.css.map */

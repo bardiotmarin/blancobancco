@@ -31,11 +31,9 @@ class ProductController extends AbstractController
     /**
      * @Route("/admin/add", name="add_product")
      */
-    public function AdminAddShop(Request $request,
-                                 EntityManagerInterface $entityManager,
-                                 SluggerInterface $slugger): Response
+    public function AdminAddShop(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger): Response
     {
-        // je créé une nouvelle instance de l'entité Book
+        // je créé une nouvelle instance de l'entité Product
         $product = new Product();
 
         // je récupère le gabarit de formulaire de
@@ -46,76 +44,68 @@ class ProductController extends AbstractController
         // on prend les données de la requête (classe Request)
         //et on les "envoie" à notre formulaire
         $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($product);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('product_index');
-        }
-
-        return $this->render('product/new.html.twig', [
-            'product' => $product,
-            'form' => $form->createView(),
-        ]);
-
-
         // si le formulaire a été envoyé et que les données sont valides
         // par rapport à celles attendues alors je persiste le produits
-        if ($productform->isSubmitted() && $productform->isValid() ) {
+
+        if ($form->isSubmitted() && $form->isValid()) {
 
             // vu que le champs bookCover de mon formulaire est en mapped false
             // je gère moi même l'enregistrment de la valeur de cet input
             // https://symfony.com/doc/current/controller/upload_file.html
 
             // je récupère l'image uploadée
-            $productImageFile = $productform->get('productImage')->getData();
+            $productImageFile = $form->get('image')->getData();
+            $name = $form->get('name')->getData();
 
             // s'il y a bien une image uploadée dans le formulaire
-            if($productImageFile){
+            if ($productImageFile) {
 
-            // je récupère le nom de l'image
-            $originalImageName = pathinfo($productImageFile->getClientOriginalName(),PATHINFO_FILENAME);
+                // je récupère le nom de l'image, lui rajoute le nom du produit - un id unique qui permet de ne pas avoir des doublon
+                // et grâce à son nom original, je gènère un nouveau qui sera unique
+                // pour éviter d'avoir des doublons de noms d'image en BDD
 
-           // et grâce à son nom original, je gènère un nouveau qui sera unique
-           // pour éviter d'avoir des doublons de noms d'image en BDD
-            $safeImageName = $slugger->slug($originalImageName);
-            $uniqueImageName = $safeImageName .'-'.uniqid().'.'.$productImageFile->guessExtension();
+
+                $originalImageName = $name.'-'.uniqid(). '.' . $productImageFile->guessExtension();
+
+                // Permet de nettoyer l'url des accents, et autres espaces indésirable
+                $originalImageName = filter_var(strip_tags($originalImageName), FILTER_SANITIZE_URL);
 
                 // j'utilise un bloc de try and catch
                 // qui agit comme une conditions, mais si le bloc try échoue, ça
                 // soulève une erreur, qu'on peut gérer avec le catch
+
+                // je prends l'image uploadée
+                // et je la déplace dans un dossier (dans public) + je la renomme avec
+                // le nom unique générée
+                // j'utilise un parametre (défini dans services.yaml) pour savoir
+                // dans quel dossier je la déplace
+                // un parametre = une sorte de variable globale
                 try {
-                    // je prends l'image uploadée
-                    // et je la déplace dans un dossier (dans public) + je la renomme avec
-                    // le nom unique générée
-                    // j'utilise un parametre (défini dans services.yaml) pour savoir
-                    // dans quel dossier je la déplace
-                    // un parametre = une sorte de variable globale
                     $productImageFile->move(
                         $this->getParameter('product_image_directory'),
-                        $uniqueImageName
+                        $originalImageName
                     );
+
                 } catch (FileException $e) {
                     return new Response($e->getMessage());
                 }
                 // je sauvegarde dans la colonne bookCover le nom de mon image
-                $product->setProductImage($uniqueCoverName);
+                $product->setImage($originalImageName);
             }
-             $entityManager->persist($product);
+
+
+            // J'envoi à la base de donnée
+            $entityManager->persist($product);
             $entityManager->flush();
-
-            $this->addFlash('success', 'Votre produit a été créé !');
-
-            return $this->redirectToRoute('product_index');
+            $this->addFlash('success', 'Produit enregistré');
         }
 
-        // je retourne mon fichier twig, en lui envoyant
-        // la vue du formulaire, générée avec la méthode createView()
-        return $this->render('admin/admin_book_insert.html.twig', [
-            'bookForm' => $bookForm->createView()
-        ]);
+
+//return $this->redirectToRoute('product_index');
+        return $this->render('product/new.html.twig', [
+
+            'form' => $form->createView()]);
+
     }
 
 

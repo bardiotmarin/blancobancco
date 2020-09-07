@@ -92,6 +92,7 @@
                     <div class="block">
                         {% for product in products %}
                             <div class="product">
+                                <img src="{{ asset('img/shop')}}/{{ product.image }}" alt="{{ product.name }}">
                                 <p>{{ product.name }}</p>
                                 <p>{{ product.price }} Euros</p>
                                 <a href="{{ path("shop_show", {"id":product.id}) }}">Acheter le teeshirt </a>
