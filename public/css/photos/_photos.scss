@@ -7,16 +7,14 @@ ul li {
   list-style: none;
 }
 
-nav
-nav{
+nav nav{
   border: solid 1px violet;
   height: 8vh;
-
 }
 
-.main-photos{
-  height: 50vh
-}
+
+
+
 .logo-blanco{
   width: 100px;
   height: auto;
@@ -38,19 +36,6 @@ nav{
 
 }
 
-
-/* font */
-
-
-@font-face{
-  font-family: 'vogue';
-  src: url(../Fontzer/Vogue.ttf);
-}
-@font-face{
-  font-family: 'lemon';
-  src: url(../Fontzer/LEMONMILK-Light.otf);
-}
-
 /* customs */
 
 .barre{
@@ -63,14 +48,13 @@ nav{
 .carousel-inner-cover{
   height: 490px;
 }
+.card-img-top{
 
-.tareuss{
-  border-color: tomato 1px;
 }
-
-
-
-
+/*tailles photos principal*/
+.main-photos{
+  height: 50vh
+}
 
 /* magique card menu */
 .cardd-zoom {

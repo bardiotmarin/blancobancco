@@ -121,7 +121,6 @@ ul li {
 }
 
 /* /navbar */
-/* font */
 /* customs */
 .barre {
   width: 150px;
@@ -132,10 +131,6 @@ ul li {
 /* carousel */
 .carousel-inner-cover {
   height: 490px;
-}
-
-.tareuss {
-  border-color: tomato 1px;
 }
 
 * {
@@ -149,10 +144,6 @@ ul li {
 nav nav {
   border: solid 1px violet;
   height: 8vh;
-}
-
-.main-photos {
-  height: 50vh;
 }
 
 .logo-blanco {
@@ -174,15 +165,6 @@ nav nav {
   text-align: center;
 }
 
-/* font */
-@font-face {
-  font-family: "vogue";
-  src: url(../Fontzer/Vogue.ttf);
-}
-@font-face {
-  font-family: "lemon";
-  src: url(../Fontzer/LEMONMILK-Light.otf);
-}
 /* customs */
 .barre {
   width: 150px;
@@ -195,8 +177,9 @@ nav nav {
   height: 490px;
 }
 
-.tareuss {
-  border-color: tomato 1px;
+/*tailles photos principal*/
+.main-photos {
+  height: 50vh;
 }
 
 /* magique card menu */
@@ -655,6 +638,15 @@ body {
   font-family: Garden;
   text-align: center;
   font-size: 25px;
+}
+
+@font-face {
+  font-family: "vogue";
+  src: url(../Fontzer/Vogue.ttf);
+}
+@font-face {
+  font-family: "lemon";
+  src: url(../Fontzer/LEMONMILK-Light.otf);
 }
 
 /*# sourceMappingURL=main.css.map */
